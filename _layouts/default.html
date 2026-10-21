@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner" aria-label="Site header">
+      <div class="container">
+        <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
+        <p class="site-tagline">{{ site.description }}</p>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/transmission-view/' | relative_url }}">Transmission View</a></li>
+            <li><a href="{{ '/meaning-culture/' | relative_url }}">Meaning &amp; Culture</a></li>
+            <li><a href="{{ '/power-interpretation/' | relative_url }}">Power &amp; Meaning</a></li>
+            <li><a href="{{ '/intention-interpretation/' | relative_url }}">Intention</a></li>
+            <li><a href="{{ '/reader-guidance/' | relative_url }}">What to Do</a></li>
+            <li><a href="{{ '/how-this-site-was-built/' | relative_url }}">How Built</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="container" role="main" aria-label="Main content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      </div>
+    </footer>
+  </body>
+</html>
