@@ -1,0 +1,9 @@
+title: "Communication Theory Primer"
+description: "An accessible guide to communication theory lenses for contemporary communication problems involving AI."
+url: "https://abbyduffer12.github.io"
+baseurl: "/comm-primer-best-"
+markdown: kramdown
+permalink: pretty
+plugins: []
+exclude:
+  - vendor/
